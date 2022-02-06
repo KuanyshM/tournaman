@@ -40,6 +40,12 @@
                                     + Add Article
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ url('/events/add') }}"
+                                   class="nav-link text-success">
+                                    + Add Events
+                                </a>
+                            </li>
                         @endauth
                     </ul>
 
