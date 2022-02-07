@@ -24,7 +24,11 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Tournaman') }}
+                    <ul>
+                        <il> <img src="https://thumb.tildacdn.com/tild3461-6330-4539-b637-643431633765/-/resize/40x/-/format/webp/trophy_3.png"> </il>
+                        <il> {{ config('app.name', 'Tournaman') }}</il>
+                    </ul>
+
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -32,25 +36,26 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        @auth
-                            <li class="nav-item">
-                                <a href="{{ url('/articles/add') }}"
-                                    class="nav-link text-success">
-                                    + Add Article
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('/events/add') }}"
-                                   class="nav-link text-success">
-                                    + Add Events
-                                </a>
-                            </li>
-                        @endauth
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="{{ url('/events/add') }}"
+                               class="nav-link text-success">
+                                + Add Events
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/events/add') }}"
+                               class="nav-link text">
+                                City
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/events/add') }}"
+                               class="nav-link text">
+                                English
+                            </a>
+                        </li>
                         <!-- Authentication Links -->
                             @guest
                             @if (Route::has('login'))

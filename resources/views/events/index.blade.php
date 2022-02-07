@@ -9,6 +9,26 @@
                     {{ session('info') }}
                 </div>
             @endif
+                <div class="card mb-2">
+                    <div class="card-body  row">
+                        <div class="col-1 dropdown">
+                            <div class="nav-item dropdown">
+                                <div  class="dropdown-toggle"  role="button" data-bs-toggle="dropdown" >
+                                    Category
+                                </div>
+
+                                <div class="dropdown-menu" >
+                                    <div class="dropdown-item">Category - 1</div>
+                                    <div class="dropdown-item">Category - 2</div>
+                                    <div class="dropdown-item">Category - 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
 
             {{ $events->links() }}
 
